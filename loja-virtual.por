@@ -1,21 +1,17 @@
 
-            senao se (opcao_crud == 3)
+                caso 2:
+                    limpa()
+                    escreva("--- MEU CARRINHO DE COMPRAS ---\n")
+                    se (qtd_carrinho_prod1 == 0 e qtd_carrinho_prod2 == 0 e qtd_carrinho_prod3 == 0)
                     {
-                        se (quantidade_temp > 0 e quantidade_temp <= estoque_prod3)
+                        escreva("Seu carrinho está vazio.\n")
+                    } senao
+                    {
+                        se (qtd_carrinho_prod1 > 0)
                         {
-                            qtd_carrinho_prod3 = qtd_carrinho_prod3 + quantidade_temp
-                            estoque_prod3 = estoque_prod3 - quantidade_temp
-                            escreva("Item adicionado ao carrinho com sucesso!")
-                        } senao {
-                            escreva("Quantidade inválida ou acima do estoque disponível!")
+                            escreva("- ", qtd_carrinho_prod1, "x Camisa Esportiva (R$ ", (qtd_carrinho_prod1 * preco_prod1), ")\n")
                         }
-                    }
-                    senao {
-                        escreva("Produto inválido!")
-                    }
-                    escreva("\nPressione ENTER para voltar ao menu...")
-                    leia(tecla_pausa)
-                    pare
 
+    
   }
 }
