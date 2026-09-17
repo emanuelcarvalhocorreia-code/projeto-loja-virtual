@@ -1,5 +1,4 @@
-programa {
-  funcao inicio() {
+
     
 
         inteiro opcao_menu_principal = -1
