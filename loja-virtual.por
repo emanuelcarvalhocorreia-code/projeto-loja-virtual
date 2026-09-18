@@ -59,7 +59,13 @@ programa {
                           {
                           se (quantidade_temp > 0 e quantidade_temp <= estoque_prod2)
                          {
-                            qtd_carrinho_prod2 = qtd_carrinho_prod2 + quantidade_temp
+                      {
+                        se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1)
+                        {
+                            qtd_carrinho_prod1 = qtd_carrinho_prod1 + quantidade_temp
+                            estoque_prod1 = estoque_prod1 - quantidade_temp
+                            escreva("Item adicionado ao carrinho com sucesso!")
+                        } senao {          qtd_carrinho_prod2 = qtd_carrinho_prod2 + quantidade_temp
                             estoque_prod2 = estoque_prod2 - quantidade_temp
                             escreva("Item adicionado ao carrinho com sucesso!")
                         } senao {
@@ -94,7 +100,7 @@ programa {
                     {
                         escreva("Seu carrinho está vazio.\n")
                     } senao
-                    {
+                    
                         se (qtd_carrinho_prod1 > 0)
                         {
                             escreva("- ", qtd_carrinho_prod1, "x Camisa Esportiva (R$ ", (qtd_carrinho_prod1 * preco_prod1), ")\n")
@@ -129,7 +135,15 @@ programa {
                     se (opcao_crud == 1)
                     {
                         se (quantidade_temp >= 0 e quantidade_temp <= estoque_prod1)
-                        {
+                        
+                             estoque_prod1 = estoque_prod1 + qtd_carrinho_prod1
+                             qtd_carrinho_prod1 = quantidade_temp
+                            estoque_prod1 = estoque_prod1 - quantidade_temp
+                            escreva("Quantidade atualizada com sucesso!")
+                        } senao {
+                            escreva("Quantidade inválida ou acima do estoque disponível!")
+                        }
+                    }
 
 
 
@@ -139,6 +153,8 @@ programa {
 
 
 
+     
 
+     }
   }
 }
