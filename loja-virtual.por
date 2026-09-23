@@ -1,6 +1,5 @@
 programa {
   funcao inicio() {
-    
     inteiro opcao_menu_principal = -1
     inteiro opcao_crud = -1
     inteiro quantidade_temp = 0
@@ -172,19 +171,50 @@ se (opcao_crud == 1)
     estoque_prod3 = estoque_prod3 - quantidade_temp
     escreva("\nQuantidade atualizada com sucesso!")
   }
-  senao
-  {
-    escreva("\nQuantidade inválida ou acima do estoque disponível!")
-  }
-}
-senao
-{
-  escreva("\nOpção inválida!")
-}
+    senao
+    {
+      escreva("\nQuantidade inválida ou acima do estoque disponível!")
+    }
+    }
+    senao
+    {
+    escreva("\nOpção inválida!")
+    }
 
-escreva("\n\nPressione ENTER para voltar ao menu...")
-leia(tecla_pausa)
-pare
+    escreva("\n\nPressione ENTER para voltar ao menu...")
+    leia(tecla_pausa)
+    pare
+    caso 3:
+        limpa()
+        escreva("--- ALTERAR QUANTIDADE NO CARRINHO ---\n")
+        escreva("1. Camisa Esportiva (No carrinho: ", qtd_carrinho_prod1, ")
+        escreva("2. Boné Casual (No carrinho: ", qtd_carrinho_prod2, ")
+        escreva("3. Tênis de Corrida (No carrinho: ", qtd_carrinho_prod3, ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 }
 }
