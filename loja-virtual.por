@@ -44,7 +44,7 @@ programa {
   escreva("3. Tênis de Corrida (Estoque: ", estoque_prod3, ") - R$ ", preco_prod3)
 
   escreva("\nEsc    inteiro opcao_menu_principal = -1
-  olha o produto que deseja adicionar: ")
+  
   leia(opcao_crud)
 
   escreva("Digite a quantidade desejada: ")
@@ -52,27 +52,27 @@ programa {
 
   se (opcao_crud == 1)
   {
-    se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1)
-    {
-      qtd_carrinho_prod1 = qtd_carrinho_prod1 + quantidade_temp
-      estoque_prod1 = estoque_prod1 - quantidade_temp
-      escreva("Item adicionado ao carrinho com sucesso!")
-    }
-    senao
-    {
-      escreva("Quantidade inválida ou acima do estoque disponível!")
-    }
-  }
-  senao se (opcao_crud == 2)
+  se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1)
   {
-    se (quantidade_temp > 0 e quantidade_temp <= estoque_prod2)
-    {
-      qtd_carrinho_prod2 = qtd_carrinho_prod2 + quantidade_temp
-      estoque_prod2 = estoque_prod2 - quantidade_temp
-      escreva("Item adicionado ao carrinho com sucesso!")
-    }
-    senao
-    {
+    qtd_carrinho_prod1 = qtd_carrinho_prod1 + quantidade_temp
+    estoque_prod1 = estoque_prod1 - quantidade_temp
+    escreva("Item adicionado ao carrinho com sucesso!")
+  }
+  senao
+  {
+    escreva("Quantidade inválida ou acima do estoque disponível!")
+  }
+}
+senao se (opcao_crud == 2)
+{
+  se (quantidade_temp > 0 e quantidade_temp <= estoque_prod2)
+  {
+    qtd_carrinho_prod2 = qtd_carrinho_prod2 + quantidade_temp
+    estoque_prod2 = estoque_prod2 - quantidade_temp
+    escreva("Item adicionado ao carrinho com sucesso!")
+  }
+  senao
+  {
       escreva("Quantidade inválida ou acima do estoque disponível!")
     }
   }
@@ -108,20 +108,20 @@ programa {
     escreva("Seu carrinho está vazio.\n")
   }
   senao
+{
+  se (qtd_carrinho_prod1 > 0)
   {
-    se (qtd_carrinho_prod1 > 0)
-    {
-      escreva("- ", qtd_carrinho_prod1, "x Camisa Esportiva (R$ ", (qtd_carrinho_prod1 * preco_prod1), ")\n")
-    }
-    se (qtd_carrinho_prod2 > 0)
-    {
-      escreva("- ", qtd_carrinho_prod2, "x Boné Casual (R$ ", (qtd_carrinho_prod2 * preco_prod2), ")\n")
-    }
-    se (qtd_carrinho_prod3 > 0)
-    {
-      escreva("- ", qtd_carrinho_prod3, "x Tênis de Corrida (R$ ", (qtd_carrinho_prod3 * preco_prod3), ")\n")
-    }
+    escreva("- ", qtd_carrinho_prod1, "x Camisa Esportiva (R$ ", (qtd_carrinho_prod1 * preco_prod1), ")\n")
   }
+  se (qtd_carrinho_prod2 > 0)
+  {
+    escreva("- ", qtd_carrinho_prod2, "x Boné Casual (R$ ", (qtd_carrinho_prod2 * preco_prod2), ")\n")
+  }
+  se (qtd_carrinho_prod3 > 0)
+  {
+    escreva("- ", qtd_carrinho_prod3, "x Tênis de Corrida (R$ ", (qtd_carrinho_prod3 * preco_prod3), ")\n")
+  }
+}
 
   escreva("\nPressione ENTER para voltar ao menu...")
   leia(tecla_pausa)
@@ -231,12 +231,12 @@ programa {
       }
       se (qtd_carrinho_prod2 > 0)
       {
-          escreva("- ", qtd_carrinho_prod2, "x Boné Casual = R$ ", (qtd_carrinho_prod2 * preco_prod2), "\n")
-      }
-                    se (qtd_carrinho_prod3 > 0)
-        {
-            escreva("- ", qtd_carrinho_prod3, "x Tênis de Corrida = R$ ", (qtd_carrinho_prod3 * preco_prod3), "\n")
-        }
+        escreva("- ", qtd_carrinho_prod2, "x Boné Casual = R$ ", (qtd_carrinho_prod2 * preco_prod2), "\n")
+  }
+      se (qtd_carrinho_prod3 > 0)
+    {
+      escreva("- ", qtd_carrinho_prod3, "x Tênis de Corrida = R$ ", (qtd_carrinho_prod3 * preco_prod3), "\n")
+    }
         escreva("---------------------------\n")
         escreva("Valor total bruto: R$ ", valor_total_bruto, "\n")
         escreva("Desconto aplicado: R$ ", valor_desconto, "\n")
@@ -247,307 +247,4 @@ programa {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-}
-
-
-
-
-  }
-
-}
+    
