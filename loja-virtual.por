@@ -123,9 +123,9 @@ senao se (opcao_crud == 3)
 caso 3:
   limpa()
   escreva("--- ALTERAR QUANTIDADE NO CARRINHO ---\n")
-  escreva("1. Camisa Esportiva (No carrinho: ", qtd_carrinho_prod1, ")")
-  escreva("2. Boné Casual (No carrinho: ", qtd_carrinho_prod2, ")")
-  escreva("3. Tênis de Corrida (No carrinho: ", qtd_carrinho_prod3, ")")
+  escreva("\n1. Camisa Esportiva (No carrinho: ", qtd_carrinho_prod1, ")")
+  escreva("\n2. Boné Casual (No carrinho: ", qtd_carrinho_prod2, ")")
+  escreva("\n3. Tênis de Corrida (No carrinho: ", qtd_carrinho_prod3, ")")
   escreva("\nEscolha o item para alterar a quantidade: ")
   leia(opcao_crud)
   escreva("Digite a NOVA quantidade total para este item: ")
@@ -219,11 +219,15 @@ senao se (opcao_crud == 3)
 
   // ====================== PAGAMENTO ======================
   limpa()
+  se (valor_total_bruto > 0)
+
+valor_total_bruto = (qtd_carrinho_prod1 * preco_prod1)+
+                    (qtd_carrinho_prod2 * preco_prod2)+
+                    (qtd_carrinho_prod3 *  preco_prod3)
+
   escreva("--- FORMA DE PAGAMENTO ---\n")
   escreva("\n1. Pagamento via PIX (10% de desconto)")
   escreva("\n2. Cartão de Crédito (Valor normal)")
-
-
   escreva("\nEscolha a forma de pagamento: ")
   leia(opcao_pagamento)
   se (opcao_pagamento == 1)
@@ -259,12 +263,13 @@ senao se (opcao_crud == 3)
   {
     escreva("- ", qtd_carrinho_prod3, "x Tênis de Corrida = R$ ", (qtd_carrinho_prod3 * preco_prod3), "\n")
 }
+
 escreva("---------------------------\n")
 escreva("Valor total bruto: R$ ", valor_total_bruto, "\n")
 escreva("Desconto aplicado: R$ ", valor_desconto, "\n")
 escreva("Valor final a pagar: R$ ", valor_final, "\n")
 escreva("---------------------------\n")
 escreva("Obrigado por comprar conosco!\n")
-  }
+    }
   }
 
