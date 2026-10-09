@@ -220,8 +220,8 @@ senao se (opcao_crud == 3)
   // ====================== PAGAMENTO ======================
   limpa()
   escreva("--- FORMA DE PAGAMENTO ---\n")
-  escreva("1. Pagamento via PIX (10% de desconto)")
-  escreva("2. Cartão de Crédito (Valor normal)")
+  escreva("\n1. Pagamento via PIX (10% de desconto)")
+  escreva("\n2. Cartão de Crédito (Valor normal)")
 
 
   escreva("\nEscolha a forma de pagamento: ")
