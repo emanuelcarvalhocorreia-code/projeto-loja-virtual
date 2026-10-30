@@ -18,7 +18,7 @@ inteiro qtd_carrinho_prod3 = 0
 real valor_total_bruto = 0.0
 real valor_desconto = 0.0
 real valor_final = 0.0
-real quantidade_temp = 0.0
+inteiro quantidade_temp = 0.0
 
 enquanto (opcao_menu_principal != 0)
 {
@@ -183,7 +183,6 @@ senao se (opcao_crud == 2)
   escreva("\nPressione ENTER para voltar ao menu...")
   leia(tecla_pausa)
   pare
-  pare
 
 caso 4:
   limpa()
@@ -218,7 +217,6 @@ caso 4:
     }
     escreva("\nPressione ENTER para voltar ao menu...")
     leia(tecla_pausa)
-    pare
     pare
   }
 
